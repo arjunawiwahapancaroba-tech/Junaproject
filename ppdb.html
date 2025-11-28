@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPDB Online - SMA KUNINGAN</title>
+    <!-- (Salin semua <head> dari index.html) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: { brand: { yellow: '#FACC15', blue: '#2563EB', dark: '#0F172A' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-brand-dark antialiased relative">
+
+    <!-- BACKGROUND ANIMATION -->
+    <div class="blob-cont">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- NAVIGATION (Salin dari index.html, ubah link aktif) -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="glass mx-4 mt-4 rounded-2xl px-6 py-3 flex justify-between items-center shadow-sm">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="relative w-10 h-10 overflow-hidden rounded-lg shadow-inner">
+                    <!-- GANTI: src="/assets/logo.png" -->
+                    <img src="/assets/logo.jpg" alt="Logo SMA Kuningan" class="object-cover w-full h-full">
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg leading-none tracking-tight">SMA KUNINGAN</h1>
+                    <span class="text-[10px] font-bold text-blue-600 tracking-widest uppercase">Madrasah of Future</span>
+                </div>
+            </a>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-1 p-1 bg-gray-100/50 rounded-full border border-white/50 backdrop-blur-sm">
+                <a href="index.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Beranda</a>
+                <a href="profil.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Profil</a>
+                <a href="guru.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Guru</a>
+                <a href="berita.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Berita</a>
+                <a href="kontak.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Kontak</a>
+            </div>
+            <!-- CTA & Mobile Burger -->
+            <div class="flex items-center gap-3">
+                <a href="ppdb.html" class="hidden md:flex items-center gap-2 bg-brand-blue text-white px-6 py-2.5 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/30 hover:-translate-y-1">
+                    PPDB Online <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 bg-white rounded-lg shadow-sm text-brand-dark">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU OVERLAY (Salin dari index.html) -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center gap-8">
+        <button id="close-menu-btn" class="absolute top-8 right-8 p-2 bg-gray-100 rounded-full hover:rotate-90 transition-transform">
+            <i data-lucide="x" class="w-6 h-6 text-gray-600"></i>
+        </button>
+        <a href="index.html" class="text-2xl font-bold hover:text-blue-600">Beranda</a>
+        <a href="profil.html" class="text-2xl font-bold hover:text-blue-600">Profil</a>
+        <a href="guru.html" class="text-2xl font-bold hover:text-blue-600">Guru</a>
+        <a href="berita.html" class="text-2xl font-bold hover:text-blue-600">Berita</a>
+        <a href="kontak.html" class="text-2xl font-bold hover:text-blue-600">Kontak</a>
+        <a href="ppdb.html" class="mt-4 px-8 py-3 bg-brand-blue text-white rounded-full font-bold text-xl shadow-xl">Daftar Sekarang</a>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <div class="pt-40 pb-24 text-center relative overflow-hidden">
+            <div class="container mx-auto px-6 relative z-10 reveal">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-brand-dark mb-4">PPDB Online 2025/2026</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Bergabunglah dengan SMA Kuningan dan jadilah bagian dari generasi unggul.</p>
+            </div>
+        </div>
+
+        <!-- Konten Form PPDB -->
+        <div class="container mx-auto px-6 py-16">
+            <div class="max-w-4xl mx-auto glass-card p-8 md:p-12 reveal">
+                <form action="#" class="space-y-8">
+                    <!-- Bagian 1: Data Calon Siswa -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-brand-dark mb-6 border-b-2 border-brand-yellow pb-2">Data Calon Siswa</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="form-label">Nama Lengkap</label>
+                                <input type="text" placeholder="Nama Lengkap" class="form-input" required>
+                            </div>
+                            <div>
+                                <label class="form-label">NISN</label>
+                                <input type="text" placeholder="Nomor Induk Siswa Nasional" class="form-input" required>
+                            </div>
+                            <div>
+                                <label class="form-label">Asal Sekolah (SMP)</label>
+                                <input type="text" placeholder="Contoh: SMPN 1 Kuningan" class="form-input" required>
+                            </div>
+                            <div>
+                                <label class="form-label">Pilihan Jurusan</label>
+                                <select class="form-input">
+                                    <option value="">Pilih Jurusan</option>
+                                    <option value="ipa">Sains & Teknologi (IPA)</option>
+                                    <option value="ips">Sosial & Humaniora (IPS)</option>
+                                    <option value="seni">Seni & Digital Kreatif</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bagian 2: Data Orang Tua -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-brand-dark mb-6 border-b-2 border-brand-yellow pb-2">Data Orang Tua / Wali</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="form-label">Nama Ayah / Wali</label>
+                                <input type="text" placeholder="Nama Orang Tua" class="form-input">
+                            </div>
+                            <div>
+                                <label class="form-label">No. Telepon (WhatsApp)</label>
+                                <input type="tel" placeholder="0812xxxxxx" class="form-input" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tombol Submit -->
+                    <div class="text-center pt-6">
+                        <button type="submit" class="w-full md:w-auto px-12 py-4 bg-brand-blue text-white rounded-xl font-bold shadow-lg shadow-blue-500/30 hover:bg-blue-700 transition-all hover:-translate-y-1">
+                            Kirim Formulir Pendaftaran
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER (Salin dari index.html) -->
+    <footer class="bg-brand-dark text-white pt-20 pb-10 relative overflow-hidden mt-20">
+        <!-- (Kode footer lengkap ada di file index.html) -->
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

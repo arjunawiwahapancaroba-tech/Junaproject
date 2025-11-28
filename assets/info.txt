@@ -1,0 +1,37 @@
+/assets/logo.png (Logo sekolah)
+
+/assets/slider-1.jpg (Foto slider 1)
+
+/assets/slider-2.jpg (Foto slider 2)
+
+/assets/slider-3.jpg (Foto slider 3)
+
+/assets/kepala-sekolah.jpg (Foto Kepala Sekolah)
+
+/assets/guru-1.jpg (Foto Guru 1)
+
+/assets/guru-2.jpg (Foto Guru 2)
+
+/assets/guru-3.jpg (Foto Guru 3)
+
+/assets/guru-4.jpg (Foto Guru 4)
+
+/assets/berita-1.jpg (Thumbnail Berita 1)
+
+/assets/berita-2.jpg (Thumbnail Berita 2)
+
+/assets/berita-3.jpg (Thumbnail Berita 3)
+
+/assets/berita-4.jpg (Thumbnail Berita 4)
+
+/assets/berita-5.jpg (Thumbnail Berita 5)
+
+/assets/berita-6.jpg (Thumbnail Berita 6)
+
+/assets/fasilitas-1.jpg (Foto Lab Komputer)
+
+/assets/fasilitas-2.jpg (Foto Perpustakaan)
+
+/assets/fasilitas-3.jpg (Foto Lap. Olahraga)
+
+/assets/peta-sekolah.jpg (Gambar peta lokasi)

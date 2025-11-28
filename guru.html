@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guru & Staf - MTs SINDANGRAJA</title>
+    <!-- (Salin semua <head> dari index.html) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: { brand: { yellow: '#FACC15', blue: '#2563EB', dark: '#0F172A' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-brand-dark antialiased relative">
+
+    <!-- BACKGROUND ANIMATION -->
+    <div class="blob-cont">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- NAVIGATION (Salin dari index.html, ubah link aktif) -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="glass mx-4 mt-4 rounded-2xl px-6 py-3 flex justify-between items-center shadow-sm">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="relative w-10 h-10 overflow-hidden rounded-lg shadow-inner">
+                    <!-- GANTI: src="/assets/logo.png" -->
+                    <img src="/assets/logo.jpg" alt="Logo SMA Kuningan" class="object-cover w-full h-full">
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg leading-none tracking-tight">MTs SINDANGRAJA</h1>
+                    <span class="text-[10px] font-bold text-blue-600 tracking-widest uppercase">Madrasah of Future</span>
+                </div>
+            </a>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-1 p-1 bg-gray-100/50 rounded-full border border-white/50 backdrop-blur-sm">
+                <a href="index.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Beranda</a>
+                <a href="profil.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Profil</a>
+                <a href="guru.html" class="px-5 py-2 rounded-full bg-white text-blue-600 font-bold shadow-sm transition-all">Guru</a>
+                <a href="berita.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Berita</a>
+                <a href="kontak.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Kontak</a>
+            </div>
+            <!-- CTA & Mobile Burger -->
+            <div class="flex items-center gap-3">
+                <a href="ppdb.html" class="hidden md:flex items-center gap-2 bg-brand-blue text-white px-6 py-2.5 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/30 hover:-translate-y-1">
+                    PPDB Online <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 bg-white rounded-lg shadow-sm text-brand-dark">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU OVERLAY (Salin dari index.html) -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center gap-8">
+        <button id="close-menu-btn" class="absolute top-8 right-8 p-2 bg-gray-100 rounded-full hover:rotate-90 transition-transform">
+            <i data-lucide="x" class="w-6 h-6 text-gray-600"></i>
+        </button>
+        <a href="index.html" class="text-2xl font-bold hover:text-blue-600">Beranda</a>
+        <a href="profil.html" class="text-2xl font-bold hover:text-blue-600">Profil</a>
+        <a href="guru.html" class="text-2xl font-bold text-blue-600">Guru</a>
+        <a href="berita.html" class="text-2xl font-bold hover:text-blue-600">Berita</a>
+        <a href="kontak.html" class="text-2xl font-bold hover:text-blue-600">Kontak</a>
+        <a href="ppdb.html" class="mt-4 px-8 py-3 bg-brand-blue text-white rounded-full font-bold text-xl shadow-xl">Daftar Sekarang</a>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <div class="pt-40 pb-24 text-center relative overflow-hidden">
+            <div class="container mx-auto px-6 relative z-10 reveal">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-brand-dark mb-4">Guru & Tenaga Pendidik</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Figur profesional dan berdedikasi yang membimbing siswa.</p>
+            </div>
+        </div>
+
+        <!-- Daftar Guru -->
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Card Guru 1 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200">
+                        <!-- GANTI: src="/assets/guru-1.jpg" -->
+                        <img src="/assets/guru-1.jpg" class="w-full h-full object-cover object-top" alt="Guru 1">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-dark">KH. Jaohari Arifin.</h3>
+                        <p class="text-blue-600 font-semibold text-sm mt-1">Sesepuh Yayasan</p>
+                    </div>
+                </div>
+                <!-- Card Guru 2 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200">
+                        <!-- GANTI: src="/assets/guru-2.jpg" -->
+                        <img src="/assets/guru-2.jpg" class="w-full h-full object-cover object-top" alt="Guru 2">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-dark">KH. Zenal Millah.</h3>
+                        <p class="text-blue-600 font-semibold text-sm mt-1">Ketua Yayasan</p>
+                    </div>
+                </div>
+                <!-- Card Guru 3 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200">
+                        <!-- GANTI: src="/assets/guru-3.jpg" -->
+                        <img src="/assets/guru-3.jpg" class="w-full h-full object-cover object-top" alt="Guru 3">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-dark">KH. Ihban Abdussomad, S.Pd.</h3>
+                        <p class="text-blue-600 font-semibold text-sm mt-1">Bendahara Yayasan</p>
+                    </div>
+                </div>
+                <!-- Card Guru 4 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200">
+                        <!-- GANTI: src="/assets/guru-4.jpg" -->
+                        <img src="/assets/guru-4.jpg" class="w-full h-full object-cover object-top" alt="Guru 4">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-dark">KH. Dahri Zenal Arifin, BA.</h3>
+                        <p class="text-blue-600 font-semibold text-sm mt-1">Komite MTs</p>
+                    </div>
+                </div>
+
+                <!-- Cards Guru 5 - 32 (format sama) -->
+                <!-- If you have photos, replace /assets/guru-X.jpg and update names/roles -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-5.jpg" class="w-full h-full object-cover object-top" alt="Guru 5"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Drs. Asep Rusman</h3><p class="text-blue-600 font-semibold text-sm mt-1">Kepala Madrasah</p></div>
+                </div>
+
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-6.jpg" class="w-full h-full object-cover object-top" alt="Guru 6"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Aa Sudirman, M.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Wakamad Kurikulum</p></div>
+                </div>
+
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-7.jpg" class="w-full h-full object-cover object-top" alt="Guru 7"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Ujang Hilman, S.Pd. </h3><p class="text-blue-600 font-semibold text-sm mt-1">Wakamad Kesiswaan</p></div>
+                </div>
+
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-8.jpg" class="w-full h-full object-cover object-top" alt="Guru 8"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Aziz Mu'min, S.Pd. </h3><p class="text-blue-600 font-semibold text-sm mt-1">Wakamad Sarana Prasarana</p></div>
+                </div>
+
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-9.jpg" class="w-full h-full object-cover object-top" alt="Guru 9"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Drs. Dadang Somantri</h3><p class="text-blue-600 font-semibold text-sm mt-1">Wakamad Humas</p></div>
+                </div>
+
+                <!-- Card Guru 10 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-10.jpg" class="w-full h-full object-cover object-top" alt="Guru 10"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Drs. Dadang Somantri</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 11 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-11.jpg" class="w-full h-full object-cover object-top" alt="Guru 11"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Drs. Ade Nurhayati</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 12 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-12.jpg" class="w-full h-full object-cover object-top" alt="Guru 12"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Hj. Titin Wartini, S.Ag.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 13 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-13.jpg" class="w-full h-full object-cover object-top" alt="Guru 13"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Aa Sudirman, M.Pd.I</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 14 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-14.jpg" class="w-full h-full object-cover object-top" alt="Guru 14"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Eneng Nurani, S.Pd.I</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 15 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-15.jpg" class="w-full h-full object-cover object-top" alt="Guru 15"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Ujang Hilman, S.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 16 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-16.jpg" class="w-full h-full object-cover object-top" alt="Guru 16"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Marfu'ah, S.Ag.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 17 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-17.jpg" class="w-full h-full object-cover object-top" alt="Guru 17"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Ai Hani Hasnawati, S.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 18 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-18.jpg" class="w-full h-full object-cover object-top" alt="Guru 18"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Aziz Mu'min, S.Pd.I</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 19 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-19.jpg" class="w-full h-full object-cover object-top" alt="Guru 19"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Yusuf Shodiq Julaikha, S.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 20 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-20.jpg" class="w-full h-full object-cover object-top" alt="Guru 20"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Hanifah Wardah, S.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 21 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-21.jpg" class="w-full h-full object-cover object-top" alt="Guru 21"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Acep Yusuf Fisal, S.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 22 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-22.jpg" class="w-full h-full object-cover object-top" alt="Guru 22"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Asep Saeful Milah, S.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 23 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-23.jpg" class="w-full h-full object-cover object-top" alt="Guru 23"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Oki Muntaha, S.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 24 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-24.jpg" class="w-full h-full object-cover object-top" alt="Guru 24"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Sita Muthmainnah, S.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 25 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-25.jpg" class="w-full h-full object-cover object-top" alt="Guru 25"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Aa Abdul Latif MZ, M.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 26 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-26.jpg" class="w-full h-full object-cover object-top" alt="Guru 26"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Cecep Alamsyah T., S.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 27 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-27.jpg" class="w-full h-full object-cover object-top" alt="Guru 27"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Usep Somantri, S.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 28 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-28.jpg" class="w-full h-full object-cover object-top" alt="Guru 28"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Lu'lu Azizah, S.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 29 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-29.jpg" class="w-full h-full object-cover object-top" alt="Guru 29"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Muhammad Asyam, S.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 30 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-30.jpg" class="w-full h-full object-cover object-top" alt="Guru 30"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Nisa Nur Aifah, S.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 31 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-31.jpg" class="w-full h-full object-cover object-top" alt="Guru 31"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Muhammad Nurussalam, S.H.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 32 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200"><img src="/assets/guru-32.jpg" class="w-full h-full object-cover object-top" alt="Guru 32"></div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-brand-dark">Feni Anggraeni Muchtar, S.Pd.</h3><p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p></div>
+                </div>
+
+                <!-- Card Guru 33 -->
+                <div class="glass-card text-center overflow-hidden reveal">
+                    <div class="h-64 bg-gray-200">
+                        <img src="/assets/guru-33.jpg" class="w-full h-full object-cover object-top" alt="Guru 33">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-dark">Ikrima Zulfa I., S.Psi.</h3>
+                        <p class="text-blue-600 font-semibold text-sm mt-1">Staf Pengajar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER (Salin dari index.html) -->
+    <footer class="bg-brand-dark text-white pt-20 pb-10 relative overflow-hidden mt-20">
+        <!-- (Kode footer lengkap ada di file index.html) -->
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

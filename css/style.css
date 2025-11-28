@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- 1. BACKGROUND ANIMATION (Bola-bola) --- */
+.blob-cont {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+    z-index: -1; overflow: hidden; background: #f8fafc;
+}
+.blob {
+    position: absolute; border-radius: 50%; filter: blur(80px);
+    opacity: 0.6; animation: fly 20s infinite alternate;
+}
+.blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: #e0f2fe; }
+.blob-2 { bottom: -10%; right: -10%; width: 60vw; height: 60vw; background: #fefce8; animation-delay: -5s; }
+.blob-3 { top: 30%; left: 40%; width: 40vw; height: 40vw; background: #f3e8ff; animation-delay: -10s; }
+@keyframes fly {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, 50px) scale(1.1); }
+}
+
+/* --- 2. GLASSMORPHISM (Efek Kaca) --- */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.glass-card { @apply glass rounded-2xl shadow-sm transition-all duration-500; }
+.glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* --- 3. HERO SLIDER & KEN BURNS EFFECT --- */
+.hero-slide {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: 1;
+}
+.hero-slide.active { opacity: 1; z-index: 2; }
+
+/* Animasi Ken Burns (Zoom perlahan) pada gambar */
+.slider-image {
+    width: 100%; height: 100%; object-fit: cover;
+    transform: scale(1.15); /* Mulai dari zoom */
+    transition: transform 8s ease-out;
+}
+.hero-slide.active .slider-image {
+    transform: scale(1); /* Kembali ke normal saat aktif */
+}
+
+/* Animasi Teks (Fade Up) */
+.slide-content {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1) 0.5s; /* Delay 0.5s */
+}
+.hero-slide.active .slide-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- 4. SCROLL ANIMATIONS (Fade Up) --- */
+.reveal {
+    opacity: 0; transform: translateY(50px);
+    transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active { opacity: 1; transform: translateY(0); }
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+/* --- 5. TEXT GRADIENTS & Scrollbar --- */
+.text-gradient {
+    background: linear-gradient(to right, #2563EB, #FACC15);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }

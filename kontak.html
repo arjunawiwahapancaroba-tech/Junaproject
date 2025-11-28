@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami - MTs SINDANGRAJA</title>
+    <!-- (Salin semua <head> dari index.html) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: { brand: { yellow: '#FACC15', blue: '#2563EB', dark: '#0F172A' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-brand-dark antialiased relative">
+
+    <!-- BACKGROUND ANIMATION -->
+    <div class="blob-cont">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- NAVIGATION (Salin dari index.html, ubah link aktif) -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="glass mx-4 mt-4 rounded-2xl px-6 py-3 flex justify-between items-center shadow-sm">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="relative w-10 h-10 overflow-hidden rounded-lg shadow-inner">
+                    <!-- GANTI: src="/assets/logo.jpg" -->
+                    <img src="/assets/logo.jpg" alt="Logo MTs SINDANGRAJA" class="object-cover w-full h-full">
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg leading-none tracking-tight">MTs SINDANGRAJA</h1>
+                    <span class="text-[10px] font-bold text-blue-600 tracking-widest uppercase">Madrasah of Future</span>
+                </div>
+            </a>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-1 p-1 bg-gray-100/50 rounded-full border border-white/50 backdrop-blur-sm">
+                <a href="index.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Beranda</a>
+                <a href="profil.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Profil</a>
+                <a href="guru.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Guru</a>
+                <a href="berita.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Berita</a>
+                <a href="kontak.html" class="px-5 py-2 rounded-full bg-white text-blue-600 font-bold shadow-sm transition-all">Kontak</a>
+            </div>
+            <!-- CTA & Mobile Burger -->
+            <div class="flex items-center gap-3">
+                <a href="ppdb.html" class="hidden md:flex items-center gap-2 bg-brand-blue text-white px-6 py-2.5 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/30 hover:-translate-y-1">
+                    PPDB Online <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 bg-white rounded-lg shadow-sm text-brand-dark">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU OVERLAY (Salin dari index.html) -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center gap-8">
+        <button id="close-menu-btn" class="absolute top-8 right-8 p-2 bg-gray-100 rounded-full hover:rotate-90 transition-transform">
+            <i data-lucide="x" class="w-6 h-6 text-gray-600"></i>
+        </button>
+        <a href="index.html" class="text-2xl font-bold hover:text-blue-600">Beranda</a>
+        <a href="profil.html" class="text-2xl font-bold hover:text-blue-600">Profil</a>
+        <a href="guru.html" class="text-2xl font-bold hover:text-blue-600">Guru</a>
+        <a href="berita.html" class="text-2xl font-bold hover:text-blue-600">Berita</a>
+        <a href="kontak.html" class="text-2xl font-bold text-blue-600">Kontak</a>
+        <a href="ppdb.html" class="mt-4 px-8 py-3 bg-brand-blue text-white rounded-full font-bold text-xl shadow-xl">Daftar Sekarang</a>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <div class="pt-40 pb-24 text-center relative overflow-hidden">
+            <div class="container mx-auto px-6 relative z-10 reveal">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-brand-dark mb-4">Hubungi Kami</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Kami siap mendengar dari Anda. Sampaikan pesan, pertanyaan, atau saran.</p>
+            </div>
+        </div>
+
+        <!-- Konten Kontak -->
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Info Kontak -->
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="glass-card p-6 reveal">
+                        <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-xl mb-4"><i data-lucide="map-pin" class="w-6 h-6 text-blue-600"></i></div>
+                        <h3 class="font-bold text-lg mb-2">Alamat</h3>
+                        <p class="text-gray-600 text-sm">Jl.Tonjong Sindangraja Jamanis Tasikmalaya 461675</p>
+                    </div>
+                    <div class="glass-card p-6 reveal delay-100">
+                        <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-xl mb-4"><i data-lucide="mail" class="w-6 h-6 text-blue-600"></i></div>
+                        <h3 class="font-bold text-lg mb-2">Email</h3>
+                        <p class="text-gray-600 text-sm">mtssindangrajajamanis@gmail.com</p>
+                    </div>
+                    <div class="glass-card p-6 reveal delay-200">
+                        <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-xl mb-4"><i data-lucide="phone" class="w-6 h-6 text-blue-600"></i></div>
+                        <h3 class="font-bold text-lg mb-2">Telepon</h3>
+                        <p class="text-gray-600 text-sm">(0265) 7570118</p>
+                    </div>
+                </div>
+
+                <!-- Form Kontak -->
+                <div class="lg:col-span-2 glass-card p-8 md:p-12 reveal delay-100">
+                    <h2 class="text-3xl font-bold mb-8 text-brand-dark">Kirim Pesan</h2>
+                    <form action="#" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="text-sm font-semibold text-gray-600 mb-2 block">Nama Lengkap</label>
+                                <input type="text" placeholder="Nama Anda" class="w-full px-5 py-3 rounded-xl bg-white/50 border border-white/80 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label class="text-sm font-semibold text-gray-600 mb-2 block">Email</label>
+                                <input type="email" placeholder="email@anda.com" class="w-full px-5 py-3 rounded-xl bg-white/50 border border-white/80 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-sm font-semibold text-gray-600 mb-2 block">Subjek</label>
+                            <input type="text" placeholder="Subjek Pesan" class="w-full px-5 py-3 rounded-xl bg-white/50 border border-white/80 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="text-sm font-semibold text-gray-600 mb-2 block">Pesan Anda</label>
+                            <textarea rows="5" placeholder="Tuliskan pesan Anda di sini..." class="w-full px-5 py-3 rounded-xl bg-white/50 border border-white/80 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <div>
+                            <button class="px-8 py-3 bg-brand-blue text-white rounded-xl font-bold shadow-lg shadow-blue-500/30 hover:bg-blue-700 transition-all hover:-translate-y-1">
+                                Kirim Pesan
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER (Salin dari index.html) -->
+    <footer class="bg-brand-dark text-white pt-20 pb-10 relative overflow-hidden mt-20">
+        <div class="absolute inset-0 opacity-5">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="md:col-span-1">
+                    <h3 class="font-extrabold text-2xl mb-3">MTs SINDANGRAJA</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Madrasah Tsanawiyah yang berkomitmen menghadirkan pendidikan berkualitas dengan nilai-nilai islami.</p>
+                </div>
+                <!-- Links -->
+                <div class="md:col-span-1">
+                    <h4 class="font-bold text-lg mb-4">Navigasi</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Beranda</a></li>
+                        <li><a href="profil.html" class="hover:text-white transition-colors">Profil</a></li>
+                        <li><a href="guru.html" class="hover:text-white transition-colors">Guru & Staf</a></li>
+                        <li><a href="berita.html" class="hover:text-white transition-colors">Berita</a></li>
+                    </ul>
+                </div>
+                <!-- Info -->
+                <div class="md:col-span-1">
+                    <h4 class="font-bold text-lg mb-4">Informasi</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="ppdb.html" class="hover:text-white transition-colors">PPDB Online</a></li>
+                        <li><a href="kontak.html" class="hover:text-white transition-colors">Kontak</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div class="md:col-span-1">
+                    <h4 class="font-bold text-lg mb-4">Ikuti Kami</h4>
+                    <div class="flex gap-3">
+                        <a href="https://www.facebook.com/p/Kls-7-mts-sindangraja-100077983026284/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mtssindangraja/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-all">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@mtssindangraja8103" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 hover:bg-red-600 rounded-lg flex items-center justify-center transition-all">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Divider -->
+            <div class="border-t border-white/10 pt-8">
+                <p class="text-center text-gray-500 text-sm">&copy; 2025 MTs SINDANGRAJA. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

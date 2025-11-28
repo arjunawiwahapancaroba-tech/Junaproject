@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Sekolah - MTs SINDANGRAJA</title>
+    <!-- (Salin semua <head> dari index.html) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: { brand: { yellow: '#FACC15', blue: '#2563EB', dark: '#0F172A' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-brand-dark antialiased relative">
+
+    <!-- BACKGROUND ANIMATION -->
+    <div class="blob-cont">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- NAVIGATION (Salin dari index.html, ubah link aktif) -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="glass mx-4 mt-4 rounded-2xl px-6 py-3 flex justify-between items-center shadow-sm">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="relative w-10 h-10 overflow-hidden rounded-lg shadow-inner">
+                    <!-- GANTI: src="/assets/logo.png" -->
+                    <img src="/assets/logo.jpg" alt="Logo MTs SINDANGRAJA" class="object-cover w-full h-full">
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg leading-none tracking-tight">MTs SINDANGRAJA</h1>
+                    <span class="text-[10px] font-bold text-blue-600 tracking-widest uppercase">Madrasah of Future</span>
+                </div>
+            </a>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-1 p-1 bg-gray-100/50 rounded-full border border-white/50 backdrop-blur-sm">
+                <a href="index.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Beranda</a>
+                <a href="profil.html" class="px-5 py-2 rounded-full bg-white text-blue-600 font-bold shadow-sm transition-all">Profil</a>
+                <a href="guru.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Guru</a>
+                <a href="berita.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Berita</a>
+                <a href="kontak.html" class="px-5 py-2 rounded-full text-gray-600 hover:text-blue-600 font-medium transition-all hover:bg-white/50">Kontak</a>
+            </div>
+            <!-- CTA & Mobile Burger -->
+            <div class="flex items-center gap-3">
+                <a href="ppdb.html" class="hidden md:flex items-center gap-2 bg-brand-blue text-white px-6 py-2.5 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/30 hover:-translate-y-1">
+                    PPDB Online <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 bg-white rounded-lg shadow-sm text-brand-dark">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU OVERLAY (Salin dari index.html) -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center gap-8">
+        <button id="close-menu-btn" class="absolute top-8 right-8 p-2 bg-gray-100 rounded-full hover:rotate-90 transition-transform">
+            <i data-lucide="x" class="w-6 h-6 text-gray-600"></i>
+        </button>
+        <a href="index.html" class="text-2xl font-bold hover:text-blue-600">Beranda</a>
+        <a href="profil.html" class="text-2xl font-bold text-blue-600">Profil</a>
+        <a href="guru.html" class="text-2xl font-bold hover:text-blue-600">Guru</a>
+        <a href="berita.html" class="text-2xl font-bold hover:text-blue-600">Berita</a>
+        <a href="kontak.html" class="text-2xl font-bold hover:text-blue-600">Kontak</a>
+        <a href="ppdb.html" class="mt-4 px-8 py-3 bg-brand-blue text-white rounded-full font-bold text-xl shadow-xl">Daftar Sekarang</a>
+    </div>
+
+
+    <main>
+        <!-- Page Header -->
+        <div class="pt-40 pb-24 text-center relative overflow-hidden">
+            <!-- GANTI: src="/assets/kepala-sekolah.jpg" -->
+            <img src="/assets/kepala-sekolah.jpg" class="absolute inset-0 w-full h-full object-cover opacity-10">
+            <div class="container mx-auto px-6 relative z-10 reveal">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-brand-dark mb-4">Tentang Kami</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Mengenal lebih dekat visi, sejarah, dan fasilitas unggulan MTs Sindangraja.</p>
+            </div>
+        </div>
+
+        <!-- Konten Profil dengan Sidebar -->
+        <div class="container mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-4 gap-12">
+            <!-- Sidebar Navigasi -->
+            <aside class="lg:col-span-1 reveal">
+                <div class="sticky top-28 glass-card p-6" id="profil-nav">
+                    <h3 class="font-bold text-lg mb-4 text-brand-dark">Navigasi Profil</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#visi-misi" class="scroll-link active block px-4 py-2 rounded-lg bg-blue-100 text-blue-600 font-semibold transition-all">Visi & Misi</a></li>
+                        <li><a href="#sejarah" class="scroll-link block px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-all">Sejarah Madrasah</a></li>
+                        <li><a href="#fasilitas" class="scroll-link block px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-all">Fasilitas</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Konten Utama -->
+            <div class="lg:col-span-3 space-y-16">
+                <!-- Visi Misi -->
+                <section id="visi-misi" class="scroll-mt-28 reveal">
+                    <div class="glass-card p-8 md:p-12">
+                        <h2 class="text-3xl font-bold mb-8 text-brand-dark">Visi & Misi</h2>
+                        <h3 class="font-bold text-xl mb-3 text-blue-600">Visi</h3>
+                        <p class="text-gray-600 mb-8 italic text-lg border-l-4 border-blue-600 pl-4">Terwujudnya Madrasah yang Unggul dalam Prestasi, Mandiri serta Berakhlak Mulia.</p>
+                        <h3 class="font-bold text-xl mb-3 text-blue-600">Misi</h3>
+                        <ul class="space-y-3 text-gray-600 list-inside list-disc">
+                            <li>Melaksanakan pembelajaran dan bimbingan yang membekali peserta didik dengan kompetensi pembelajaran abad 21 (4C).</li>
+                            <li>Meningkatkan kegiatan literasi (baca-tulis, sains, media digital, dan budaya) baik pada pembelajaran maupun lingkungan madrasah.</li>
+                            <li>Memperkuat kegiatan pembiasaan di kelas dan di luar kelas untuk pengembangan karakter islami.</li>
+                            <li>Meningkatkan kerjasama dengan pondok pesantren di lingkungan Madrasah Tsanawiyah Sindangraja dalam pembelajaran dan pembinaan peserta didik.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Sejarah -->
+                <section id="sejarah" class="scroll-mt-28 reveal">
+                    <div class="glass-card p-8 md:p-12">
+                        <h2 class="text-3xl font-bold mb-8 text-brand-dark">Sejarah Madrasah</h2>
+                        <div class="prose max-w-none text-gray-600">
+                            <p>MTs SINDANGRAJA didirikan pada tahun 1985 atas inisiasi tokoh masyarakat dan pemerintah daerah yang peduli akan pendidikan. Berawal dari gedung sederhana dengan 3 ruang kelas, kini madrasah ini telah berkembang menjadi institusi pendidikan terkemuka di Kuningan.</p>
+                            <!-- GANTI: src="/assets/gedung-lama.jpg" -->
+                            <img src="/assets/fasilitas-3.jpg" class="w-full h-64 object-cover rounded-xl my-6 shadow-md" alt="Gedung Lama MTs SINDANGRAJA">
+                            <p>Pada tahun 2010, madrasah ini ditetapkan sebagai Rintisan Sekolah Bertaraf Internasional (RSBI) dan terus mempertahankan Akreditasi A (Unggul) dari BAN-S/M hingga saat ini. Kami berkomitmen untuk terus berinovasi demi masa depan peserta didik.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Fasilitas -->
+                <section id="fasilitas" class="scroll-mt-28 reveal">
+                    <h2 class="text-3xl font-bold mb-8 text-brand-dark">Fasilitas Unggulan</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Item Fasilitas 1 -->
+                        <div class="glass-card overflow-hidden group">
+                            <!-- GANTI: src="/assets/fasilitas-lab.jpg" -->
+                            <img src="/assets/fasilitas-1.jpg" class="h-56 w-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="p-6">
+                                <h3 class="font-bold text-xl">Perpustakaan</h3>
+                                <p class="text-sm text-gray-600 mt-2">Temukan inspirasi tanpa batas di perpustakaan unggulan kami. Kami menyediakan lingkungan belajar yang kondusif—mulai dari zona hening untuk fokus hingga area kolaborasi untuk diskusi..</p>
+                            </div>
+                        </div>
+                        <!-- Item Fasilitas 2 -->
+                        <div class="glass-card overflow-hidden group">
+                            <!-- GANTI: src="/assets/fasilitas-perpus.jpg" -->
+                            <img src="/assets/fasilitas-2.jpg" class="h-56 w-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="p-6">
+                                <h3 class="font-bold text-xl">Laboratorium IPA</h3>
+                                <p class="text-sm text-gray-600 mt-2">Sebagai fasilitas pendukung akademik yang vital, laboratorium kami dirancang untuk memenuhi standar pembelajaran modern dalam rumpun Ilmu Pengetahuan Alam (Fisika, Kimia, dan Biologi). Ruangan yang luas dan kondusif dilengkapi dengan berbagai instrumen alat ukur presisi, mikroskop berkualitas, bahan-bahan praktikum yang lengkap, serta alat peraga yang interaktif.</p>
+                            </div>
+                        </div>
+                        <!-- Item Fasilitas 3 -->
+                        <div class="glass-card overflow-hidden group">
+                            <!-- GANTI: src="/assets/fasilitas-komputer.jpg" -->
+                            <img src="/assets/fasilitas-3.jpg" class="h-56 w-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="p-6">
+                                <h3 class="font-bold text-xl">Gedung Kelas Belajar</h3>
+                                <p class="text-sm text-gray-600 mt-2">Gedung kelas modern yang dirancang untuk kenyamanan belajar dengan ventilasi baik, pencahayaan optimal, dan fasilitas penunjang pembelajaran.</p>
+                            </div>
+                        </div>
+                        <!-- Item Fasilitas 4 -->
+                        <div class="glass-card overflow-hidden group">
+                            <!-- GANTI: src="/assets/fasilitas-kelas.jpg" -->
+                            <img src="/assets/fasilitas-4.jpg" class="h-56 w-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="p-6">
+                                <h3 class="font-bold text-xl">Wi‑Fi Cepat & Luas Jangkauan</h3>
+                                <p class="text-sm text-gray-600 mt-2">Jaringan Wi‑Fi sekolah berkecepatan tinggi dengan jangkauan luas untuk mendukung pembelajaran digital di seluruh area madrasah.</p>
+                            </div>
+                        </div>
+                        <!-- Item Fasilitas 5 -->
+                        <div class="glass-card overflow-hidden group">
+                            <!-- GANTI: src="/assets/fasilitas-lapangan.jpg" -->
+                            <img src="/assets/fasilitas-5.jpg" class="h-56 w-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="p-6">
+                                <h3 class="font-bold text-xl">Lapangan Olahraga (Futsal & Basket)</h3>
+                                <p class="text-sm text-gray-600 mt-2">Lapangan serbaguna untuk futsal, basket, dan kegiatan olahraga lainnya, mendukung program olahraga dan ekstrakurikuler.</p>
+                            </div>
+                        </div>
+                        <!-- Item Fasilitas 6 -->
+                        <div class="glass-card overflow-hidden group">
+                            <!-- GANTI: src="/assets/fasilitas-aula.jpg" -->
+                            <img src="/assets/fasilitas-6.jpg" class="h-56 w-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="p-6">
+                                <h3 class="font-bold text-xl">Kantin & Koperasi Lengkap</h3>
+                                <p class="text-sm text-gray-600 mt-2">Kantin sehat dan koperasi sekolah yang menyediakan kebutuhan sehari-hari, makanan bergizi, serta perlengkapan belajar.</p>
+                            </div>
+                        </div>
+                        <!-- Item Fasilitas 7 -->
+                        <div class="glass-card overflow-hidden group">
+                            <!-- GANTI: src="/assets/fasilitas-kantin.jpg" -->
+                            <img src="/assets/fasilitas-7.jpg" class="h-56 w-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="p-6">
+                                <h3 class="font-bold text-xl">Laboratorium Komputer</h3>
+                                <p class="text-sm text-gray-600 mt-2">Laboratorium komputer dengan koneksi internet cepat dan perangkat yang selalu diperbarui untuk mendukung pembelajaran TIK dan coding.</p>
+                            </div>
+                        </div>
+                        <!-- Item Fasilitas 8 -->
+                        <div class="glass-card overflow-hidden group">
+                            <!-- GANTI: src="/assets/fasilitas-seni.jpg" -->
+                            <img src="/assets/fasilitas-8.jpg" class="h-56 w-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="p-6">
+                                <h3 class="font-bold text-xl">GOR Serbaguna</h3>
+                                <p class="text-sm text-gray-600 mt-2">Gelanggang olah raga (GOR) serbaguna untuk latihan, pertandingan, dan kegiatan kebugaran lainnya.</p>
+                            </div>
+                        </div>
+                        <!-- Item Fasilitas 9 -->
+                        <div class="glass-card overflow-hidden group">
+                            <!-- GANTI: src="/assets/fasilitas-bahasa.jpg" -->
+                            <img src="/assets/fasilitas-9.jpg" class="h-56 w-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="p-6">
+                                <h3 class="font-bold text-xl">Masjid yang Luas & Nyaman</h3>
+                                <p class="text-sm text-gray-600 mt-2">Masjid madrasah yang representatif untuk ibadah, pengajian, dan kegiatan keagamaan lainnya, dengan ruang yang luas dan nyaman.</p>
+                            </div>
+                        </div>
+                        <!-- Item Fasilitas 10 -->
+                        <div class="glass-card overflow-hidden group">
+                            <!-- GANTI: src="/assets/fasilitas-ekskul.jpg" -->
+                            <img src="/assets/fasilitas-10.jpg" class="h-56 w-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="p-6">
+                                <h3 class="font-bold text-xl">Pusat Kegiatan Ekstrakurikuler</h3>
+                                <p class="text-sm text-gray-600 mt-2">Fasilitas untuk mendukung beragam kegiatan ekstrakurikuler seperti robotik, pramuka, debat, dan kegiatan keagamaan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white pt-20 pb-10 relative overflow-hidden mt-20">
+        <div class="absolute inset-0 opacity-5">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="md:col-span-1">
+                    <h3 class="font-extrabold text-2xl mb-3">MTs SINDANGRAJA</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Madrasah Tsanawiyah yang berkomitmen menghadirkan pendidikan berkualitas dengan nilai-nilai islami.</p>
+                </div>
+                <!-- Links -->
+                <div class="md:col-span-1">
+                    <h4 class="font-bold text-lg mb-4">Navigasi</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Beranda</a></li>
+                        <li><a href="profil.html" class="hover:text-white transition-colors">Profil</a></li>
+                        <li><a href="guru.html" class="hover:text-white transition-colors">Guru & Staf</a></li>
+                        <li><a href="berita.html" class="hover:text-white transition-colors">Berita</a></li>
+                    </ul>
+                </div>
+                <!-- Info -->
+                <div class="md:col-span-1">
+                    <h4 class="font-bold text-lg mb-4">Informasi</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="ppdb.html" class="hover:text-white transition-colors">PPDB Online</a></li>
+                        <li><a href="kontak.html" class="hover:text-white transition-colors">Hubungi Kami</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div class="md:col-span-1">
+                    <h4 class="font-bold text-lg mb-4">Ikuti Kami</h4>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-blue-400 rounded-lg flex items-center justify-center transition-all">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-all">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Divider -->
+            <div class="border-t border-white/10 pt-8">
+                <p class="text-center text-gray-500 text-sm">&copy; 2025 MTs SINDANGRAJA. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
