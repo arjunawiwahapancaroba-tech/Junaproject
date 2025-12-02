@@ -53,9 +53,7 @@
             </div>
             <!-- CTA & Mobile Burger -->
             <div class="flex items-center gap-3">
-                <a href="ppdb.html" class="hidden md:flex items-center gap-2 bg-brand-blue text-white px-6 py-2.5 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/30 hover:-translate-y-1">
-                    PPDB Online <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </a>
+                <!-- PPDB button removed -->
                 <button id="mobile-menu-btn" class="md:hidden p-2 bg-white rounded-lg shadow-sm text-brand-dark">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
@@ -87,6 +85,11 @@
 
         <!-- Grid Berita (KOSONG - Diisi JS) -->
         <div class="container mx-auto px-6 py-16">
+            <!-- Search Box -->
+            <div class="mb-8 flex justify-center">
+                <input type="text" id="search-news" placeholder="Cari berita... (contoh: 'Juara 1 Lomba')" class="w-full max-w-md px-6 py-3 rounded-full border-2 border-gray-300 focus:border-blue-600 focus:outline-none shadow-sm">
+            </div>
+
             <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[50vh]">
                 <!-- Skeleton Loader -->
                 <div class="h-80 bg-gray-200/50 rounded-2xl animate-pulse"></div>

@@ -112,23 +112,23 @@ document.addEventListener("DOMContentLoaded", function() {
     const DB = {
         news: [
             // Halaman 1 (Menggunakan 6 gambar pertama Anda)
-            { id: 1, title: "Juara 1 Lomba Robotik Nasional", date: "12 Nov 2025", category: "Prestasi", img: "/assets/berita-1.jpg", desc: "Tim Robotik SMA Kuningan berhasil menyabet medali emas dalam kompetisi robotik tingkat nasional di Jakarta." },
-            { id: 2, title: "Pentas Seni Tahunan 2025 'Gelora Karsa'", date: "10 Nov 2025", category: "Kegiatan", img: "/assets/berita-2.jpg", desc: "Kemeriahan pensi tahun ini sukses digelar, menghadirkan bakat-bakat terbaik siswa dan bintang tamu ternama." },
-            { id: 3, title: "Kunjungan Studi ke Museum Geologi Bandung", date: "05 Nov 2025", category: "Akademik", img: "/assets/berita-3.jpg", desc: "Siswa kelas X program IPA melakukan studi lapangan untuk belajar langsung tentang sejarah formasi bumi dan fosil." },
-            { id: 4, title: "Pelantikan OSIS Masa Bakti 2025/2026", date: "01 Nov 2025", category: "Organisasi", img: "/assets/berita-4.jpg", desc: "Upacara pelantikan pengurus OSIS baru dipimpin langsung oleh Kepala Sekolah dan berjalan dengan khidmat." },
-            { id: 5, title: "Workshop Digital Marketing untuk Kelas XII", date: "28 Okt 2025", category: "Workshop", img: "/assets/berita-5.jpg", desc: "Membekali siswa dengan skill kewirausahaan digital sebagai persiapan pasca-kelulusan." },
-            { id: 6, title: "Tim Basket Putra Lolos ke Final DBL", date: "25 Okt 2025", category: "Olahraga", img: "/assets/berita-6.jpg", desc: "Perjuangan sengit tim basket membuahkan hasil manis, melaju ke final DBL Series Jawa Barat." },
+            { id: 1, title: "Olimpiade Madrasah Indonesia", date: "11 Sept 2025", category: "Prestasi", img: "/assets/berita-1.jpg", desc: "Peserta didik MTS Sindangraja pada ajang OMI SAINS dan RISET tingkat Kabupaten Tasikmalaya." },
+            { id: 2, title: "Selamat dan Sukses'", date: "22 Nov 2024", category: "Prestasi", img: "/assets/berita-2.jpg", desc: "Pengukuhan dan pelantikan pramuka penggalang Garuda oelh ketua Kwartir Ranting Jamanis Bertempat di Gedung PGRI Jamanis." },
+            { id: 3, title: "Pemilihan Ketua OSIM 2025/2026", date: "20 Jan 2025", category: "Organisasi", img: "/assets/berita-3.jpg", desc: "Siswa-siswi MTs Sindangraja melaksanakan pemilihan ketua OSIM 2025/2026." },
+            { id: 4, title: "Juara 3 Pidato Arab", date: "31 Okt 2024", category: "Prestasi", img: "/assets/berita-4.jpg", desc: "Upacara pelantikan pengurus OSIS baru dipimpin langsung oleh Kepala Sekolah dan berjalan dengan khidmat." },
+            { id: 5, title: "Juara 3 Badminton Putri", date: "31 Okt 2024", category: "Prestasi", img: "/assets/berita-5.jpg", desc: "Dalam POSHAB (Pekan Olahraga dan hari Amal Bakti)Kemenag Tingkat KKM se-kabupaten Tasikmlaya Utara." },
+            { id: 6, title: "Juara 3 pidato inggris putra", date: "31 Okt 2024", category: "Prestasi", img: "/assets/berita-6.jpg", desc: "Dalam POSHAB ( Pekan Olahraga dan hari amal bakti)Kemenag Tingkat KKM se-Kabupaten Tasikmalaya Utara." },
             
             // Halaman 2 (Menggunakan ulang 6 gambar Anda untuk demo paginasi)
-            { id: 7, title: "Sosialisasi Bahaya Narkoba oleh BNN", date: "20 Okt 2025", category: "Penyuluhan", img: "/assets/berita-1-2.jpg", desc: "Bekerjasama dengan BNN Kabupaten Kuningan, sekolah mengadakan penyuluhan anti-narkoba untuk seluruh siswa." },
-            { id: 8, title: "Aksi Donor Darah Sukarela PMR", date: "15 Okt 2025", category: "Sosial", img: "/assets/berita-2-2.jpg", desc: "Aksi kemanusiaan yang diinisiasi oleh PMR Wira SMA Kuningan berhasil mengumpulkan 150 kantong darah." },
-            { id: 9, title: "Upacara Peringatan Hari Kesaktian Pancasila", date: "01 Okt 2025", category: "Upacara", img: "/assets/berita-3-2.jpg", desc: "Memperingati jasa pahlawan revolusi dan meneguhkan komitmen terhadap nilai-nilai Pancasila." },
-            { id: 10, title: "Lomba Kebersihan Antar Kelas Dimulai", date: "28 Sep 2025", category: "Lingkungan", img: "/assets/berita-4-2.jpg", desc: "Menciptakan lingkungan belajar yang nyaman, bersih, dan asri melalui kompetisi sehat antar kelas." },
-            { id: 11, title: "Rapat Koordinasi Orang Tua Siswa Kelas XII", date: "25 Sep 2025", category: "Rapat", img: "/assets/berita-5-2.jpg", desc: "Sinergi antara sekolah dan orang tua untuk mempersiapkan kesuksesan Ujian Nasional dan Seleksi PTN." },
-            { id: 12, title: "Pelatihan Guru Inovatif Era AI", date: "20 Sep 2025", category: "Diklat", img: "/assets/berita-6-2.jpg", desc: "Meningkatkan kompetensi pengajar dalam mengintegrasikan teknologi Artifical Intelligence dalam pembelajaran." },
+            { id: 7, title: " Juara 1 Kaligrafi Putra", date: "31 Okt 2024", category: "Prestasi", img: "/assets/berita-1-2.jpg", desc: "Dalam POSHAB (Pekan Olahraga dan Hari Amal Bakti)Kemenag Tingkat KKM Se-Kabupaten Tasikmalaya Utara " },
+            { id: 8, title: "Juara 1 MTQ Putri", date: "31 Okt 2024", category: "Prestasi", img: "/assets/berita-2-2.jpg", desc: "Dalam POSHAB (Pekan Olahraga dan Hari Amal Bakti)Kemenag Tingkat KKM Se-Kabupaten Tasikmalaya Utara" },
+            { id: 9, title: "Juara 1 Atletik Putra", date: "31 Okt 2024", category: "Prestasi", img: "/assets/berita-3-2.jpg", desc: "Dalam POSHAB (Pekan Olahraga dan Hari Amal Bakti)Kemenag Tingkat KKM Se-Kabupaten Utara" },
+            { id: 10, title: "Juara 2 Utama Hiking Putra Kompas 9 Se-Jawa Barat", date: "26 Okt 2024", category: "Prestasi", img: "/assets/berita-4-2.jpg", desc: "Dalam Kejuara Kepramuka KOMPAS ( Kompetisi Pramukan Mansatas) Se-Jawa Barat di 1 MAN 1 Kota Tasikmalaya" },
+            { id: 11, title: "Juara Mendali Perak", date: "1 Jan 2023", category: "Prestasi", img: "/assets/berita-5-2.jpg", desc: "Dalam Kejuaran Nasional Karate Jenjang Pendidikan Islam Se-Indonesia" },
+            { id: 12, title: "Juara Mendali Emas", date: "28 Nov 2023", category: "Prestasi", img: "/assets/berita-6-2.jpg", desc: "Pada Kelas Kata Perorangan Putri Kejuaraan Provinsi Jawa Barat" },
            
             // Halaman 3 (Hanya 1 item, menggunakan gambar pertama lagi)
-            { id: 13, title: "Renovasi dan Perluasan Masjid Sekolah", date: "15 Sep 2025", category: "Fasilitas", img: "/assets/berita-1.jpg", desc: "Proses renovasi masjid sekolah dimulai untuk menambah daya tampung dan kenyamanan ibadah siswa." }
+            { id: 13, title: "Juara Mendali Emas", date: "1 Jan 2023", category: "Prestasi", img: "/assets/berita-1-3.jpg", desc: "Dalam Kejuaraan Nasional Karate Jenjang Pendidikan Islam Se-Idonesia" }
         ]
     };
 
@@ -231,4 +231,25 @@ document.addEventListener("DOMContentLoaded", function() {
         
         renderPage(1);
     }
+
+    // --- 6. FITUR PENCARIAN BERITA (Tambahkan sebelum penutup DOMContentLoaded) ---
+    const searchInput = document.getElementById('search-news');
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const keyword = e.target.value.toLowerCase();
+            const filtered = DB.news.filter(news => 
+                news.title.toLowerCase().includes(keyword) ||
+                news.desc.toLowerCase().includes(keyword) ||
+                news.category.toLowerCase().includes(keyword)
+            );
+            
+            newsGrid.innerHTML = filtered.length > 0 
+                ? filtered.map(createNewsCard).join('')
+                : '<div class="col-span-full text-center py-12"><p class="text-gray-500 text-lg">Tidak ada berita dengan kata kunci: "<strong>' + keyword + '</strong>"</p></div>';
+            
+            pagination.innerHTML = '';
+            lucide.createIcons();
+        });
+    }
+
 });
